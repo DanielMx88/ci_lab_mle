@@ -2,7 +2,8 @@ name: ci-tests
 on: [push]
 jobs:
   run:
-    runs-on: [windows-latest]
+    runs-on: [ubuntu-latest]
+    container: python:3.9
     steps:
       - uses: actions/checkout@v2
       
@@ -11,5 +12,5 @@ jobs:
           pip install pytest==7.1.2
           pip install pytest-cov==3.0.0
           pip install flake8
-          pytest C:\Users\DANIEL\PycharmProjects\ci_lab_mle\tests
+          pytest tests/
           flake8 .
