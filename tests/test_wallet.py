@@ -1,9 +1,11 @@
 import pytest
 from src.wallet import Wallet, InsufficientAmount
 
+
 @pytest.fixture
 def empty_wallet():
     return Wallet()
+
 
 @pytest.fixture
 def wallet():
